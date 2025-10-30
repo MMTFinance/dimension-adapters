@@ -2,7 +2,7 @@ import { Adapter, FetchOptions, FetchResultFees } from "../adapters/types";
 import { CHAIN } from "../helpers/chains";
 import { queryIndexer } from "../helpers/indexer";
 
-const BAL_TOKEN = '0xba100000625a3754423978a60c9317c58a424e3D';
+const MMT_TEST_TOKEN = '0x6f546b37018a67fa80da59f6391dc7a13e4d4444';
 
 const fetch = async (options: FetchOptions) => {
   const dailyFees = options.createBalances();
