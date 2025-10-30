@@ -1,8 +1,4 @@
-import { Adapter, FetchOptions, FetchResultFees } from "../adapters/types";
-import { CHAIN } from "../helpers/chains";
-import { queryIndexer } from "../helpers/indexer";
 
-const MMT_TEST_TOKEN = '0x6f546b37018a67fa80da59f6391dc7a13e4d4444';
 
 const fetch = async (options: FetchOptions) => {
   const dailyFees = options.createBalances();
@@ -69,6 +65,11 @@ const fetch = async (options: FetchOptions) => {
     dailyFees.add(BAL_TOKEN, '0x' + e.data)
   });
 
+  import { Adapter, FetchOptions, FetchResultFees } from "../adapters/types";
+import { CHAIN } from "../helpers/chains";
+import { queryIndexer } from "../helpers/indexer";
+
+const MMT_TEST_TOKEN = '0x6f546b37018a67fa80da59f6391dc7a13e4d4444';
 
   const dailySupplySideRevenue = dailyFees.clone();
   dailySupplySideRevenue.resizeBy(0.75);
